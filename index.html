@@ -452,7 +452,10 @@
     <script src=https://kit.fontawesome.com/f6b5f64dfc.js crossorigin=anonymous></script>
     <script src=https://unpkg.com/aos@2.3.1/dist/aos.js></script>
     <script>AOS.init({
-            disable: 'mobile'
+            disable: function () {
+                var maxWidth = 1200;
+                return window.innerWidth < maxWidth;
+            }
         });</script>
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
     <script src=./js/owl.carousel.min.js></script>
